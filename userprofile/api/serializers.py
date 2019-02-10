@@ -15,8 +15,9 @@ class UserProfileSerializer(serializers.ModelSerializer):
             'phone_no',
             'gender',
             'birth_date',
+            'player_games'
         ]
-        read_only_fields = ['user'] #now this is read only, we cant see them in put and post
+        read_only_fields = ['user', 'id'] #now this is read only, we cant see them in put and post
 
     # def validate_content(self,value):
     #     if len(value)>1000:

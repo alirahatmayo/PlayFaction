@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'phonenumber_field',
 
     #local apps
-    'userprofile'
+    'userprofile',
+    'game',
 ]
 
 MIDDLEWARE = [
