@@ -23,13 +23,13 @@ class UserProfile(models.Model):
         ('o', 'Other'),
     )
 
-
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete= models.CASCADE)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    # user = models.One(settings.AUTH_USER_MODEL, on_delete= models.CASCADE)
     birth_date = models.DateField(null=True)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=True)
     phone_no = PhoneNumberField(blank=True)
     objects = UserProfileManager()
-    player_games = models.ManyToManyField(Game, null=True, related_name='games')
+    player_games = models.ManyToManyField(Game, blank=True, related_name='games')
 
 
     def __str__(self):
