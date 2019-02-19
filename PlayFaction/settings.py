@@ -46,7 +46,10 @@ INSTALLED_APPS = [
     #local apps
     'userprofile',
     'game',
-    'tournament'
+    'tournament',
+    'account',
+    'transaction',
+
 ]
 
 MIDDLEWARE = [
