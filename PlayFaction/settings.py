@@ -24,8 +24,8 @@ SECRET_KEY = 'w6^(jp+@ir9b*km)rqx_#x(804^u4!2%vod-=2g2dr+#2mk%rg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
+#use wild card to run django test server on any ip
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
